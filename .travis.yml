@@ -6,9 +6,12 @@ services:
 env:
 - LINUX_CXX=g++-4.8
 
-os:
-- linux
-- osx
+matrix:
+  - os: linux
+    arch: amd64
+  - os: linux
+    arch: arm64
+  - os: osx
 
 node_js:
 - '10'
